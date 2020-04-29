@@ -23,10 +23,10 @@ const Header = styled.header`
 const Logo = styled(MyImage)`
   max-width: 100%;
   height: auto;
-  width: 240px;
+  width: 160px;
 
   ${EXTRA_SMALL_DEVICES`
-    width: 140px;
+    width: 100px;
    `};
 `;
 

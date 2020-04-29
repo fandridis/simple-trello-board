@@ -14,9 +14,9 @@ import { Spinner } from '../layout/UI/Spinners/Spinner';
  * STYLES
  */
 const StyledBoardContainer = styled.div`
-  margin-top: 4%;
   width: 100%;
   max-width: 1200px;
+  margin-top: 2%;
   height: 100%;
 
   display: flex;
