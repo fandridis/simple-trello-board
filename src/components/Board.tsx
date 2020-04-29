@@ -60,7 +60,7 @@ export const AxelraTrello = () => {
 
   useEffect(() => {
     dispatch(fetchTodos());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     setTodoState({

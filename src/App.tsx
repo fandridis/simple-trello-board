@@ -10,15 +10,10 @@ const Container = styled.div`
 `;
 
 const Header = styled.header`
-  margin-top: 2em;
   padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  ${EXTRA_SMALL_DEVICES`
-      margin-top: 1em;
-   `};
 `;
 const Logo = styled(MyImage)`
   max-width: 100%;

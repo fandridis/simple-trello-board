@@ -21,7 +21,6 @@ const todoReducer = () => {
     state = initialState,
     action: FetchedTodos | ErrorTodos | LoadingTodos | ToggleTodo | DeleteTodo | AddTodo | CreateTodoLoading
   ) => {
-    console.log('action: ', action);
     switch (action.type) {
       case ActionTypes.LOADING_TODOS:
         return { ...state, loading: action.loading };
@@ -57,7 +56,6 @@ const todoReducer = () => {
         };
 
       case ActionTypes.CREATE_TODO_LOADING:
-        console.log('action: ', action);
         return {
           ...state,
           createLoading: action.createLoading

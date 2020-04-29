@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import styled from "styled-components";
 import { createTodo } from '../reducers/todos/actions';
 import { AddCircleOutline } from '@styled-icons/material-outlined/AddCircleOutline';
-import { __COLORS } from "../layout/Theme";
 import useOnClickOutside from '../helpers/useOnClickOutside';
 import SmallSpinner from '../layout/UI/Spinners/SmallSpinner';
 
@@ -92,9 +91,9 @@ export const AddTask = ({ isCompleted }: AddTaskProps) => {
       <StyledAddTaskContainer>
         {createLoading ?
           (
-            <div style={{ height: '100%', padding: '0px 16px', display: 'flex', alignItems: 'center' }}>
+            <StyledLoaderWrapper>
               <SmallSpinner />
-            </div>
+            </StyledLoaderWrapper>
           ) : (
             <StyledInput
               ref={inputRef}

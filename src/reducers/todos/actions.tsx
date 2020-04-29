@@ -15,7 +15,9 @@ export const fetchTodos = (): any => {
 
     fetch(`${getDomain()}/todos`, HTTP_OPTIONS(PROTOCOL_METHOD.GET))
       .then(res => res.json())
-      .then(({ todos }) => {
+      .then(({ todos, error }) => {
+        if (error) throw error;
+
         dispatch({
           type: ActionTypes.FETCHED_TODOS,
           loading: false,
@@ -23,7 +25,7 @@ export const fetchTodos = (): any => {
         });
       })
       .catch((error: string) => {
-        console.log(error);
+        console.log('err: ', error);
         dispatch({
           type: ActionTypes.ERROR_TODOS,
           error,
@@ -52,8 +54,8 @@ export const createTodo = (title: string, completed: boolean): any => {
     })
       .then(res => res.json())
       .then(({ todo, error }) => {
-        if (error) throw 'Error';
-        console.log('todo: ', todo);
+        if (error) throw error;
+
         dispatch({
           type: ActionTypes.ADD_TODO,
           todo: todo
@@ -91,9 +93,7 @@ export const toggleTodo = (todo: Todo): any => {
     })
       .then(res => res.json())
       .then(({ todo, error }) => {
-        if (error) throw 'Error';
-        console.log('todo: ', todo);
-
+        if (error) throw error;
       })
       .catch(err => {
         console.log('err: ', err);
@@ -125,9 +125,7 @@ export const deleteTodo = (todo: Todo): any => {
     })
       .then(res => res.json())
       .then(({ error }) => {
-        if (error) throw 'Error';
-        console.log('todo: ', todo);
-
+        if (error) throw error;
       })
       .catch(err => {
         console.log('err: ', err);
