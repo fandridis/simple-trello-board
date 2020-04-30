@@ -16,6 +16,7 @@ import { Spinner } from '../layout/UI/Spinners/Spinner';
 const StyledBoardContainer = styled.div`
   width: 100%;
   max-width: 1200px;
+  min-width: 360px;
   margin-top: 2%;
   height: 100%;
 
