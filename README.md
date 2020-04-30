@@ -1,6 +1,7 @@
 # Simple board
 
-## Quick and simply backend to accompany this: https://repl.it/@fandridis/demoAPI
+### Live Preview: https://simple-board.netlify.app/challenge
+## Quick backend for testing: https://repl.it/@fandridis/demoAPI
 
 ## Available Scripts
 
