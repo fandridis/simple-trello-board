@@ -43,8 +43,8 @@ const move = (source: any, destination: any, droppableSource: any, droppableDest
 
 
 const id2List: any = {
-  droppable: 'items',
-  droppable2: 'selected'
+  listInProgress: 'items',
+  listCompleted: 'selected'
 };
 
 /**
@@ -95,8 +95,8 @@ export const AxelraTrello = () => {
 
       // Update the local state
       setTodoState({
-        items: updatedLists.droppable,
-        selected: updatedLists.droppable2
+        items: updatedLists.listInProgress,
+        selected: updatedLists.listCompleted
       });
     }
   };
@@ -112,8 +112,8 @@ export const AxelraTrello = () => {
   return (
     <StyledBoardContainer>
       <DragDropContext onDragEnd={onDragEnd}>
-        <BoardList title="IN PROGRESS" icon={<Task size={32} />} headerColor="#e76f51" droppableId="droppable" items={todoState.items} />
-        <BoardList title="COMPLETED" icon={<CheckShield size={32} />} headerColor="#2a9d8f" droppableId="droppable2" items={todoState.selected} />
+        <BoardList title="IN PROGRESS" icon={<Task size={32} />} headerColor="#e76f51" droppableId="listInProgress" items={todoState.items} />
+        <BoardList title="COMPLETED" icon={<CheckShield size={32} />} headerColor="#2a9d8f" droppableId="listCompleted" items={todoState.selected} />
       </DragDropContext>
     </StyledBoardContainer>
   )

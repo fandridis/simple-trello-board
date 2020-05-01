@@ -146,7 +146,7 @@ export const BoardList = ({ title, droppableId, items, headerColor, icon }: Boar
             <span style={{ display: "none" }}>
               {provided.placeholder}
             </span>
-            <AddTask isCompleted={droppableId === 'droppable2'} />
+            <AddTask isCompleted={droppableId === 'listCompleted'} />
           </div>
         )}
       </Droppable>
